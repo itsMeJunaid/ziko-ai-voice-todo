@@ -1,0 +1,34 @@
+# livekit-wakeword training config for Ziko's wake phrase.
+# Train:  livekit-wakeword run spikes/hey_ziko.yaml     (after `livekit-wakeword setup`)
+# Output: spikes/out/hey_ziko/hey_ziko.onnx  → copy to backend/app/assets/wakeword/ in Phase 5
+#
+# Start with the values below (fast). If false positives are high in the spike, raise n_samples
+# to 10000 and steps to 50000 (the project's "prod" defaults) and retrain on a GPU.
+model_name: hey_ziko
+target_phrases:
+  - "hey ziko"
+  - "hey zeeko"      # pronunciation variant — TTS data covers how people actually say it
+  - "hey zico"
+# Sound-alikes generated as hard negatives so they don't wake Ziko.
+custom_negative_phrases:
+  - "hey siri"
+  - "hey google"
+  - "hey kiko"
+  - "hey zoe"
+  - "hey zip code"
+  - "easy go"
+  - "ziko"
+
+n_samples: 10000         # v1 used 4000: real-voice scores sat just above threshold (5/10 hits)
+n_samples_val: 2000
+model:
+  model_type: conv_attention   # conv_attention | dnn | rnn   (dnn is required only for tflite/openWakeWord export)
+  model_size: small            # tiny | small | medium | large
+steps: 50000
+target_fp_per_hour: 0.2
+output_dir: ./spikes/out
+# More speaking-rate and voice variety than the defaults, so real voices score higher.
+length_scales: [0.7, 0.85, 1.0, 1.15, 1.3]
+noise_scales: [0.667, 0.98]
+augmentation:
+  rounds: 2

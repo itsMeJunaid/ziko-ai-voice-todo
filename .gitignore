@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+backend/.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+backend/build/
+backend/dist/
+*.spec
+
+# Node / Tauri
+node_modules/
+apps/desktop/dist/
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/gen/
+apps/desktop/src-tauri/binaries/
+
+# Secrets & local data
+.env
+*.db
+*.sqlite
+*.ppn
+spikes/out/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# livekit-wakeword training data (downloaded by livekit-wakeword setup)
+data/
+
+# Private planning docs
+PRD/
