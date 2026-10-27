@@ -3,7 +3,8 @@
     cd backend && uv run python scripts/build_sidecar.py
 
 Output: apps/desktop/src-tauri/binaries/ziko-backend-<rust target triple>[.exe], the name Tauri's
-`externalBin: ["binaries/ziko-backend"]` expects. Run it on each OS you ship (PyInstaller can't cross-compile).
+`externalBin: ["binaries/ziko-backend"]` expects. Run it on each OS you ship: PyInstaller can't
+cross-compile.
 """
 
 from __future__ import annotations
@@ -65,7 +66,7 @@ def main() -> None:
     BINARIES.mkdir(parents=True, exist_ok=True)
     dest = BINARIES / f"ziko-backend-{target_triple()}{exe.suffix}"
     shutil.copy2(exe, dest)
-    print(f"sidecar → {dest} ({dest.stat().st_size / 1e6:.0f} MB)")
+    print(f"sidecar -> {dest} ({dest.stat().st_size / 1e6:.0f} MB)")  # ASCII: Windows consoles are cp1252
 
 
 if __name__ == "__main__":

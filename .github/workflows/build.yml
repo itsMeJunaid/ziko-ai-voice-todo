@@ -44,6 +44,8 @@ jobs:
     needs: test
     if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
     runs-on: windows-latest
+    env:
+      PYTHONUTF8: "1" # Windows consoles default to cp1252; keep Python output in UTF-8
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
