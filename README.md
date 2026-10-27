@@ -10,6 +10,8 @@ A tiny robot pet that lives in the corner of your screen, manages your tasks and
 
 [![Download for Linux](https://img.shields.io/badge/Download-Linux%20.deb-111111?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/itsMeJunaid/ziko-ai-voice-todo/releases/latest)
 &nbsp;
+[![Windows preview](https://img.shields.io/badge/Windows-preview%20(untested)-555555?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/itsMeJunaid/ziko-ai-voice-todo/releases/latest)
+&nbsp;
 [![User manual](https://img.shields.io/badge/Read-User%20manual-f4f4f5?style=for-the-badge&logoColor=111111)](#-user-manual-linux)
 
 ![Tauri 2](https://img.shields.io/badge/Tauri-2-24C8DB?logo=tauri&logoColor=white)
