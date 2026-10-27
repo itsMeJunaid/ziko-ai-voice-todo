@@ -20,6 +20,7 @@ A tiny robot pet that lives in the corner of your screen, manages your tasks and
 ![Gemini Live](https://img.shields.io/badge/Google-Gemini%20Live-8E75B2?logo=googlegemini&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-local-003B57?logo=sqlite&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows-lightgrey)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 <img src="docs/screenshots/hero.png" alt="Ziko task panel in dark and light themes with the robot pet" />
 
@@ -216,6 +217,12 @@ Linux build prerequisites, the backend API, tests (pytest, vitest, Playwright), 
 - Signed Windows installer from CI (workflow in `.github/workflows/build.yml`)
 - Calendar sync, recurring tasks, more languages (Urdu)
 - AppImage / Flatpak for non-Debian Linux
+
+## 📄 License
+
+**Free and open source** under the [MIT License](LICENSE): use it, change it, share it, even commercially — just keep the
+copyright notice. The "Hey Ziko" wake-word model was trained for this project and is included under the same license.
+Google Gemini is a separate service with its own [terms](https://ai.google.dev/gemini-api/terms).
 
 ---
 

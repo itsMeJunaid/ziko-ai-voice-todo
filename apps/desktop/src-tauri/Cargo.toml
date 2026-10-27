@@ -1,8 +1,10 @@
 [package]
 name = "desktop"
 version = "0.1.3"
-description = "A Tauri App"
-authors = ["you"]
+description = "Ziko — AI voice to-do assistant for the desktop"
+authors = ["Junaid (itsMeJunaid)"]
+license = "MIT"
+repository = "https://github.com/itsMeJunaid/ziko-ai-voice-todo"
 edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

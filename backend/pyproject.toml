@@ -2,6 +2,7 @@
 name = "ziko-backend"
 version = "0.1.3"
 requires-python = ">=3.12"
+license = "MIT"
 dependencies = [
     "alembic>=1.20.1",
     "fastapi>=0.162.0",
